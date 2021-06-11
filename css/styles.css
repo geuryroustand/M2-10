@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap");
+
+:root {
+  --primaryColor: #1c0d26 !important;
+  --secondaryColor: #1d7261 !important;
+  --thirdColor: #f4b13d !important;
+}
+
+body {
+  color: white;
+}
+/* Navbar */
+
+header.hero {
+  height: 40vh;
+  background: url(/gog-assets/nav-bg.jpg) no-repeat center center/cover;
+  position: relative;
+}
+
+.navbar-brand span {
+  background-color: white !important;
+  display: inline-block !important;
+  width: 42px !important;
+
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.navbar-brand span img {
+  border-radius: 5px;
+}
+nav.navbar {
+  background-color: var(--primaryColor);
+  height: 60px;
+  opacity: 0.8;
+}
+
+.navbar {
+  top: 5px;
+}
+header .deal {
+  color: white;
+  position: absolute;
+  left: 400px;
+  bottom: 0;
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+header .deal div + div {
+  font-size: 28px;
+  font-weight: 700;
+}
+ul > li > a {
+  color: #ccc;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  padding-left: 10px;
+  z-index: 10 !important;
+}
+
+.hero * {
+  z-index: 10;
+  /* el aterico se usa para decir que todo lo que esta dentro de la clase .hero  */
+}
+
+/* Section slice */
+
+.border-bottom {
+  border-bottom: 1px solid var(--thirdColor) !important;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.section-slice {
+  background: var(--primaryColor);
+}
+
+/* Card */
+
+.card-slice {
+  padding-left: 0 !important;
+  margin-top: 20px;
+}
+.bg-green {
+  background: var(--secondaryColor);
+}
+
+.col-4 {
+  max-width: 23.333333%;
+}
+
+.card-footer {
+  position: relative;
+  /* align-items: center; */
+  /* padding-left: 50px; */
+}
+
+.icons-slice {
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+.discount {
+  /* display: inline-block; */
+  background-color: #d94969;
+  /* width: 20%; */
+  /* height: 30px; */
+  font-weight: 700;
+  align-self: baseline;
+
+  /* padding-left: 50px; */
+}
+
+.price {
+  position: absolute;
+  right: 19px;
+  bottom: 32px;
+  font-size: 10px;
+  line-height: 9px;
+  font-weight: 700;
+  text-decoration: line-through;
+  color: var(--thirdColor);
+}
+.fa-windows {
+  color: var(--thirdColor);
+}
