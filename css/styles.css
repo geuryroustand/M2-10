@@ -4,9 +4,16 @@
   --primaryColor: #1c0d26 !important;
   --secondaryColor: #1d7261 !important;
   --thirdColor: #f4b13d !important;
+  --fourthColor: #d94969;
+  --fontFamily: "Lato", sans-serif;
 }
 
 body {
+  color: white;
+  background-color: var(--primaryColor);
+}
+
+i {
   color: white;
 }
 /* Navbar */
@@ -26,25 +33,33 @@ header.hero {
   border-radius: 5px;
 }
 
+.nav-container {
+  z-index: 100;
+}
 .navbar-brand span img {
   border-radius: 5px;
 }
 nav.navbar {
   background-color: var(--primaryColor);
   height: 60px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .navbar {
   top: 5px;
 }
+
+.navbar-dark .navbar-brand {
+  color: red;
+}
+
 header .deal {
   color: white;
   position: absolute;
   left: 400px;
   bottom: 0;
   font-size: 17px;
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: bold;
 }
 
@@ -52,17 +67,45 @@ header .deal div + div {
   font-size: 28px;
   font-weight: 700;
 }
+
+@media (max-width: 576px) {
+  header .deal {
+    color: white;
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    font-size: 15px;
+    font-family: var(--fontFamily);
+    font-weight: bold;
+    /* text-align: center; */
+    /* margin-top: 10px; */
+  }
+
+  header .deal div p {
+    font-size: 15px;
+    /* font-weight: 700; */
+  }
+
+  header .deal div + div {
+    font-size: 21px;
+    font-weight: 700;
+  }
+}
 ul > li > a {
-  color: #ccc;
+  /* color: #ccc; */
+  /* color: red; */
   font-size: 14px;
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: 700;
   padding-left: 10px;
-  z-index: 10 !important;
+  /* z-index: 10 !important; */
+}
+
+.navbar-dark .navbar-toggler {
+  color: red;
 }
 
 .hero * {
-  z-index: 10;
   /* el aterico se usa para decir que todo lo que esta dentro de la clase .hero  */
 }
 
@@ -81,16 +124,24 @@ ul > li > a {
 /* Card */
 
 .card-slice {
-  padding-left: 0 !important;
   margin-top: 20px;
+  cursor: pointer;
+}
+.card-slice:hover {
+  width: 20% !important;
 }
 .bg-green {
   background: var(--secondaryColor);
 }
 
-.col-4 {
-  max-width: 23.333333%;
+.bg-green:hover {
+  background: var(--thirdColor);
 }
+
+/* 
+.col-4 {
+  max-width: 31.333333%;
+} */
 
 .card-footer {
   position: relative;
@@ -104,7 +155,7 @@ ul > li > a {
 }
 .discount {
   /* display: inline-block; */
-  background-color: #d94969;
+  background-color: var(--fourthColor);
   /* width: 20%; */
   /* height: 30px; */
   font-weight: 700;
@@ -125,4 +176,70 @@ ul > li > a {
 }
 .fa-windows {
   color: var(--thirdColor);
+}
+
+/* cards slice */
+
+/* Section */
+
+.outstanding-text {
+  font-size: 14px;
+  font-family: var(--fontFamily);
+  line-height: 24px;
+  font-weight: 700;
+}
+.outstanding-text span {
+  color: var(--fourthColor);
+}
+
+/* footer */
+
+div.footer {
+  background: #262626;
+}
+div ul {
+  list-style: none;
+  /* padding-left: 5px; */
+}
+
+div ul li a {
+  color: #ddd;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+}
+div ul li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+div i {
+  padding-left: 9px;
+  color: #ddd;
+}
+
+div i:hover {
+  color: var(--primaryColor);
+}
+
+.footer-navbar ul p,
+.footer-nabvar ul li a,
+footer span,
+footer ul li a {
+  color: rgba(255, 255, 255, 0.43);
+  font-size: 12px;
+}
+
+.secondPart {
+  background: #2f2f2f;
+}
+
+.secondPart img {
+  width: 4%;
+  height: 4%;
+  border-radius: 5px;
+}
+
+.current {
+  color: #da8bf0;
 }
