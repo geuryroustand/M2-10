@@ -243,3 +243,25 @@ footer ul li a {
 .current {
   color: #da8bf0;
 }
+
+@media (max-width: 576px) {
+  .footer ul {
+    flex-direction: column;
+    font-size: 26px;
+  }
+
+  .secondPart img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .secondPart ul {
+    flex-direction: column;
+  }
+  .footer-legal ul {
+    flex-direction: row;
+  }
+  footer span {
+    text-align: center;
+  }
+}
